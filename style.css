@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;700&family=Roboto:wght@100;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: #1f1f29;
+    color: white;
+}
+section{
+    padding: 80px 0;
+}
+.nav-link{
+    position: relative;
+}
+.nav-link::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: 0;
+    height: 6px;
+    width: 6px;
+    transition: all 0.15s;
+    opacity: 0;
+    background: white;
+    border-radius: 50%;
+}
+.nav-link:hover::after{
+    opacity: 1;
+}
+.nav-link:focus::after{
+    opacity: 1;
+}
+.hello{
+    position: relative;
+}
+.hello::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #1f1f29;
+    border-left: 1px solid white;
+    animation: type 3s steps(12,start) infinite;
+}
+@keyframes type{
+    100%{
+        width: 0;
+    }
+}
+.home-container{
+    position: relative;
+}
+#projects .container-md h2{
+    font-family: 'Roboto', sans-serif;
+}
+.card{
+    background: #1f1f29;
+    color: white;
+    border:1px solid white;
+}
+#contact .container-md form input{
+    width: 40%;
+    height: 40px;
+}
+.first-desc{
+    position: relative;
+    animation: slide 1s ease;
+}
+.sec-desc{
+    position: relative;
+    animation: slide ease 1.2s;
+}
+.third-desc{
+    position: relative;
+    animation: slide ease 1.4s;
+}
+@keyframes slide{
+    0%{
+        top: 150px;
+        left: 0;
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+}
+@media (max-width:700px){
+    #contact .container-md form input{
+        width: 80%;
+    }
+}
